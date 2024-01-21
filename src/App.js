@@ -1,12 +1,12 @@
 import './App.css';
 import Header from './components/Header/Header';
-import Input from './components/UI/Input/Input';
+import Task from './components/UI/Task/Task';
 
 function App() {
 	return (
 		<div className="App">
 			<Header />
-
+			<Task />
 		</div>
 	);
 }

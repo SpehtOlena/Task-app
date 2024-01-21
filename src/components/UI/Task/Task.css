@@ -1,0 +1,44 @@
+.task {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 600px;
+}
+
+.task-title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: left;
+	gap: 23px;
+	font-family: Monda;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.divider {
+	height: 2px;
+	background: #3E3B3B;
+	box-shadow: 0px 4px 4px 0px #C8E3EC;
+	margin: 5px 0 10px;
+}
+
+.task-description {
+	display: flex;
+	flex-direction: row;
+	text-align: left;
+	align-items: center;
+}
+
+.task-uncomplete {
+	flex: 1 0 auto;
+	color: #C4C4C4;
+	text-decoration: line-through;
+}
+
+.task-complete {
+	flex: 1 0 auto;
+	color: #3E3B3B;
+}
