@@ -1,0 +1,20 @@
+.input {
+	padding: 6px 29px;
+	background: #A8D2A5;
+	color: #302f2f;
+	font-family: Monda;
+	font-size: 18px;
+	font-weight: 400;
+	border: none;
+}
+
+.input:focus {
+	padding: 6px 29px;
+	font-family: Monda;
+	color: #1f241c;
+	outline: 1.5px solid #a2d49f;
+}
+
+::placeholder {
+	color: #8a8989;
+}

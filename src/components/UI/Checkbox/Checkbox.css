@@ -1,0 +1,19 @@
+.checkbox {
+	cursor: pointer;
+}
+
+.uncomplete {
+	color: #A09D9D;
+}
+
+.uncomplete:hover {
+	color: #646363;
+}
+
+.complete {
+	color: #156B2D;
+}
+
+.complete:hover {
+	color: #044e19;
+}
