@@ -1,12 +1,12 @@
 import './App.css';
 import Header from './components/Header/Header';
-import Task from './components/UI/Task/Task';
+import Page from './components/Page/Page';
 
 function App() {
 	return (
 		<div className="App">
 			<Header />
-			<Task />
+			<Page />
 		</div>
 	);
 }

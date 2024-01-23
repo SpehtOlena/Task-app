@@ -11,13 +11,11 @@ const Task = ({ task, editTask, removeTask, handleComplete }) => {
 		handleComplete(check);
 	}
 	return (
-		<div
-			// key={task.id} 
-			className={'task'}>
+		<div key={task.id} className={'task'}>
 			<div className={'task-title'}>
 				<Checkbox onClick={handleClick} complete={complete} />
 				<p className={complete ? 'task-uncomplete' : 'task-complete'}>
-					{/* {task.title} */} Task #2
+					{task.title}
 				</p>
 				<Button type={'edit'} onClick={() => editTask(task)} />
 				<Button type={'delete'} onClick={() => removeTask(task)} />
@@ -25,7 +23,7 @@ const Task = ({ task, editTask, removeTask, handleComplete }) => {
 			<div className={'divider'} />
 			<div className={'task-description'}>
 				<p className={complete ? 'task-uncomplete' : 'task-complete'}>
-					{/* {task.description} */} Task #2 Description:
+					{task.description}
 				</p>
 			</div>
 

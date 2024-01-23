@@ -1,11 +1,13 @@
 .input {
 	padding: 6px 29px;
+	box-sizing: border-box;
 	background: #A8D2A5;
 	color: #302f2f;
 	font-family: Monda;
 	font-size: 18px;
 	font-weight: 400;
 	border: none;
+	width: 100%;
 }
 
 .input:focus {
