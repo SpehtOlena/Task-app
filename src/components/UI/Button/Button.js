@@ -6,17 +6,17 @@ const Button = ({ children, onClick, type }) => {
 	switch (type) {
 		case "delete": {
 			return (
-				<LuTrash2 className={'button-delete'} size={30} />
+				<LuTrash2 className={'button-delete'} size={30} onClick={onClick} />
 			)
 		}
 		case "edit": {
 			return (
-				<FiEdit3 className={'button-edit'} size={30} />
+				<FiEdit3 className={'button-edit'} size={30} onClick={onClick} />
 			)
 		}
 		default: {
 			return (
-				<button className={'button-default'}>
+				<button className={'button-default'} onClick={onClick}>
 					{children}
 				</button>
 			)

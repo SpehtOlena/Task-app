@@ -5,8 +5,8 @@ import Button from '../UI/Button/Button';
 import Task from '../UI/Task/Task.js'
 
 const Page = () => {
-	const [inputValueTitle, setInputValueTitle] = useState();
-	const [inputValueDescription, setInputValueDescription] = useState();
+	const [inputValueTitle, setInputValueTitle] = useState('');
+	const [inputValueDescription, setInputValueDescription] = useState('');
 	const [todos, setTodos] = useState([]);
 	const handleChangeTitle = (e) => {
 		setInputValueTitle(e.target.value)
@@ -16,13 +16,12 @@ const Page = () => {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (inputValueTitle.trim()) {
-			setTodos([...todos, { id: Date.now(), title: inputValueTitle, complete: false }])
-			setInputValueTitle('')
-			setInputValueDescription('')
-			console.log(todos);
+		if (inputValueTitle && inputValueTitle.trim()) {
+			setTodos([...todos, { id: Date.now(), title: inputValueTitle, description: inputValueDescription, complete: false }])
+			setInputValueTitle('');
+			setInputValueDescription('');
 		} return null
-	}
+	};
 	const removeTask = (todoId) => {
 		setTodos(todos.filter(id => id !== todoId))
 	}

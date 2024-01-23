@@ -4,7 +4,7 @@ import Checkbox from '../Checkbox/Checkbox.js';
 import Button from '../Button/Button.js';
 
 const Task = ({ task, editTask, removeTask, handleComplete }) => {
-	const [complete, setComplete] = useState();
+	const [complete, setComplete] = useState(true);
 	const handleClick = () => {
 		setComplete(!complete);
 		const check = (task.complete) = complete;
@@ -14,7 +14,7 @@ const Task = ({ task, editTask, removeTask, handleComplete }) => {
 		<div key={task.id} className={'task'}>
 			<div className={'task-title'}>
 				<Checkbox onClick={handleClick} complete={complete} />
-				<p className={complete ? 'task-uncomplete' : 'task-complete'}>
+				<p className={complete ? 'task-complete' : 'task-uncomplete'}>
 					{task.title}
 				</p>
 				<Button type={'edit'} onClick={() => editTask(task)} />
@@ -22,7 +22,7 @@ const Task = ({ task, editTask, removeTask, handleComplete }) => {
 			</div>
 			<div className={'divider'} />
 			<div className={'task-description'}>
-				<p className={complete ? 'task-uncomplete' : 'task-complete'}>
+				<p className={complete ? 'task-complete' : 'task-uncomplete'}>
 					{task.description}
 				</p>
 			</div>
