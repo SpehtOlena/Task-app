@@ -2,29 +2,42 @@ import './Task.css';
 import { useState } from 'react';
 import Checkbox from '../Checkbox/Checkbox.js';
 import Button from '../Button/Button.js';
+import React from 'react';
 
-const Task = ({ task, editTask, removeTask, handleComplete }) => {
+import StyledEdiText from './StyledEditText.js'
+
+const Task = ({ task, removeTask, handleComplete }) => {
 	const [complete, setComplete] = useState(true);
 	const handleClick = () => {
 		setComplete(!complete);
 		const check = (task.complete) = complete;
 		handleComplete(check);
 	}
+	function onSave(task) {
+	}
+
 	return (
 		<div key={task.id} className={'task'}>
 			<div className={'task-title'}>
 				<Checkbox onClick={handleClick} complete={complete} />
-				<p className={complete ? 'task-complete' : 'task-uncomplete'}>
-					{task.title}
-				</p>
-				<Button type={'edit'} onClick={() => editTask(task)} />
+				{
+					<StyledEdiText className={complete ? 'task-complete' : 'task-uncomplete'}
+						type='text'
+						value={task.title}
+						onSave={onSave}>
+						{task.title} </StyledEdiText>
+				}
+
 				<Button type={'delete'} onClick={() => removeTask(task)} />
 			</div>
 			<div className={'divider'} />
 			<div className={'task-description'}>
-				<p className={complete ? 'task-complete' : 'task-uncomplete'}>
+				<StyledEdiText className={complete ? 'task-complete-s' : 'task-uncomplete-s'}
+					type='text'
+					value={task.description}
+					onSave={onSave}>
 					{task.description}
-				</p>
+				</StyledEdiText>
 			</div>
 
 		</div>

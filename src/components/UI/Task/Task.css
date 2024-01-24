@@ -1,3 +1,30 @@
+.styles-module_Editext__view_container__3oSYx {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 45px;
+}
+
+.styles-module_Editext__buttons_after_aligned__2ZHQz {
+	border: none;
+}
+
+.styles-module_Editext__button__sxYQX {
+	background-color: #fff !important;
+	border-color: #fff !important;
+}
+
+.styles-module_Editext__edit_button__310_J::before {
+	font-size: 35px;
+	color: #156B2D;
+}
+
+.styles-module_Editext__button__sxYQX:hover {
+	background-color: #fff !important;
+	transform: scale(1.1);
+	color: #044e19;
+}
+
 .task {
 	display: flex;
 	flex-direction: column;
@@ -10,7 +37,7 @@
 	flex-direction: row;
 	align-items: center;
 	text-align: left;
-	gap: 23px;
+	gap: 0px;
 	font-family: Monda;
 	font-size: 18px;
 	font-style: normal;
@@ -19,10 +46,12 @@
 }
 
 .divider {
+	position: relative;
+	z-index: 5;
 	height: 2px;
 	background: #3E3B3B;
 	box-shadow: 0px 4px 4px 0px #C8E3EC;
-	margin: 5px 0 10px;
+	margin: 10px 0 0;
 }
 
 .task-description {
@@ -30,6 +59,8 @@
 	flex-direction: row;
 	text-align: left;
 	align-items: center;
+	margin-top: 0;
+	margin-right: 25px;
 }
 
 .task-uncomplete {
@@ -41,4 +72,17 @@
 .task-complete {
 	flex: 1 0 auto;
 	color: #3E3B3B;
+}
+
+.task-uncomplete-s {
+	flex: 1 0 auto;
+	color: #C4C4C4;
+	text-decoration: line-through;
+	font-size: 12px !important;
+}
+
+.task-complete-s {
+	flex: 1 0 auto;
+	color: #3E3B3B;
+	font-size: 12px;
 }
