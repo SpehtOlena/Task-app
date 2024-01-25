@@ -5,6 +5,7 @@ const StyledEdiText = styled(EdiText)`
 
 button {
   border-radius: 5px;
+  text-decoration: none;
 }
 button[editext="edit-button"] {
   color: #000;
@@ -12,13 +13,14 @@ button[editext="edit-button"] {
 }
 button[editext="save-button"] {
   width: 50px;
-  font-size: 20px;
+  font-size: 17px;
   &:hover {
 	 background: #A8D2A5 ;
   }
 }
 button[editext="cancel-button"] {
-	font-size: 20px;
+	font-size: 17px;
+	margin-right: 8px;
   &:hover {
 	color: #800202;
 	 
@@ -31,6 +33,8 @@ input, textarea {
   border-radius: 5px;
   border: none;
   font-family: Monda;
+  font-size: inherit;
+  padding: 0px;
 }
 div[editext="view-container"], div[editext="edit-container"] {
   background: #fff;

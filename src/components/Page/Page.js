@@ -27,7 +27,6 @@ const Page = () => {
 	}
 	const handleComplete = (todo_completed) => {
 		setTodos(todos.filter(complete => complete !== todo_completed))
-		console.log(todos);
 	};
 	return (
 		<div className={'page'}>

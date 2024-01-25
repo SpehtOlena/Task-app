@@ -15,8 +15,9 @@
 }
 
 .styles-module_Editext__edit_button__310_J::before {
-	font-size: 35px;
+	font-size: 30px;
 	color: #156B2D;
+
 }
 
 .styles-module_Editext__button__sxYQX:hover {
@@ -69,6 +70,10 @@
 	text-decoration: line-through;
 }
 
+.task-uncomplete button {
+	display: none;
+}
+
 .task-complete {
 	flex: 1 0 auto;
 	color: #3E3B3B;
@@ -80,6 +85,11 @@
 	text-decoration: line-through;
 	font-size: 12px !important;
 }
+
+.task-uncomplete-s button {
+	display: none;
+}
+
 
 .task-complete-s {
 	flex: 1 0 auto;
