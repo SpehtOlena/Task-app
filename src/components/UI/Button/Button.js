@@ -14,6 +14,13 @@ const Button = ({ children, onClick, type }) => {
 				<FiEdit3 className={'button-edit'} size={30} onClick={onClick} />
 			)
 		}
+		case "small": {
+			return (
+				<button className={'button-default-small'} onClick={onClick}>
+					{children}
+				</button>
+			)
+		}
 		default: {
 			return (
 				<button className={'button-default'} onClick={onClick}>

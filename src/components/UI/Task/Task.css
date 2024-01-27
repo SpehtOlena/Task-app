@@ -3,7 +3,11 @@
 	align-items: center;
 	justify-content: space-between;
 	height: 45px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
+
+.styles-module_Editext__view_container__3oSYx>div {}
 
 .styles-module_Editext__buttons_after_aligned__2ZHQz {
 	border: none;

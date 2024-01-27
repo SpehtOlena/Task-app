@@ -14,9 +14,27 @@
 	cursor: pointer;
 }
 
-.button-default:hover {
+.button-default:hover,
+.button-default-small:hover {
 	background: linear-gradient(90deg, #a2d49f 0%, #a6d2e0 65.2%);
 	transition: all 0.3s ease;
+	border: 1px solid #156B2D;
+}
+
+.button-default-small {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	padding: 14px 40px;
+	border: none;
+	border-radius: 25px;
+	background: linear-gradient(90deg, #A8D2A5 0%, #ACD4E1 115.2%);
+	box-shadow: 0px 4px 4px 0px #ACD4E1;
+	color: #3E3B3B;
+	font-family: Monda;
+	font-size: 18px;
+	font-weight: 400;
+	cursor: pointer;
 }
 
 .button-delete {
@@ -30,13 +48,9 @@
 	color: #800202;
 }
 
-.button-edit {
-	color: #156B2D;
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
+@media (max-width: 768px) {
+	.button-default {
+		padding: 12px 98px;
+	}
 
-.button-edit:hover {
-	transform: scale(1.1);
-	color: #044e19;
 }

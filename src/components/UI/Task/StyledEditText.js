@@ -35,6 +35,7 @@ input, textarea {
   font-family: Monda;
   font-size: inherit;
   padding: 0px;
+  
 }
 div[editext="view-container"], div[editext="edit-container"] {
   background: #fff;
@@ -42,8 +43,39 @@ div[editext="view-container"], div[editext="edit-container"] {
   color: ;#3E3B3B;
   font-family: Monda;
  }
+ div[editext="view"]{
+	overflow: hidden;
+	text-overflow: ellipsis;	
+	max-width: 450px;
+  }
 &.task-uncomplete {
 	color: #C4C4C4;
+}
+@media (max-width: 1024px) {
+	div[editext="view"]{
+		overflow: hidden;
+		text-overflow: ellipsis;	
+		max-width: 400px;
+	  }
+@media (max-width: 768px) {
+	div[editext="view"]{
+		overflow: hidden;
+		text-overflow: ellipsis;	
+		max-width: 200px;
+		font-size: 14px;
+	  }
+@media (max-width: 480px) {
+	div[editext="view"]{
+		overflow: hidden;
+		text-overflow: ellipsis;	
+		max-width: 120px;
+	  }
+	  @media (max-width: 320px) {
+		div[editext="view"]{
+			overflow: hidden;
+			text-overflow: ellipsis;	
+			max-width: 90px;
+		  }
 }
 `
 

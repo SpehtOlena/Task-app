@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Input from '../UI/Input/Input.js';
 import Button from '../UI/Button/Button';
 import Task from '../UI/Task/Task.js'
+import Empty from '../Empty/Empty.js';
 
 const Page = () => {
 	const [inputValueTitle, setInputValueTitle] = useState('');
@@ -28,6 +29,7 @@ const Page = () => {
 	const handleComplete = (todo_completed) => {
 		setTodos(todos.filter(complete => complete !== todo_completed))
 	};
+
 	return (
 		<div className={'page'}>
 			<div className={'input-container'}>
@@ -46,7 +48,7 @@ const Page = () => {
 					))
 				}
 				{
-					todos.length === 0 && <p>Empty</p>
+					todos.length === 0 && <Empty />
 				}
 			</div>
 			<div className={'statistic-container'}>

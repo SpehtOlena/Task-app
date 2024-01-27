@@ -5,9 +5,15 @@ import Button from '../Button/Button.js';
 import React from 'react';
 
 import StyledEdiText from './StyledEditText.js'
+import Modal from '../../Modal/Modal.js';
 
-const Task = ({ task, removeTask, handleComplete }) => {
+const Task = ({ task, removeTask, handleComplete, onClose }) => {
 	const [complete, setComplete] = useState(true);
+	const [modalOpen, setModalOpen] = useState(false);
+	const onClickButton = () => {
+		setModalOpen(!modalOpen)
+		console.log(modalOpen);
+	}
 	const handleClick = () => {
 		setComplete(!complete);
 		const check = (task.complete) = complete;
@@ -28,7 +34,8 @@ const Task = ({ task, removeTask, handleComplete }) => {
 						{task.title} </StyledEdiText>
 				}
 
-				<Button type={'delete'} onClick={() => removeTask(task)} />
+				<Button type={'delete'} onClick={onClickButton} />
+				{/* <Button type={'delete'} onClick={() => removeTask(task)} /> */}
 			</div>
 			<div className={'divider'} />
 			<div className={'task-description'}>
@@ -39,8 +46,10 @@ const Task = ({ task, removeTask, handleComplete }) => {
 					{task.description}
 				</StyledEdiText>
 			</div>
-
-		</div>
+			<Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+				<Button type={'small'} onClick={() => removeTask(task)}>Yes</Button>
+			</Modal>
+		</div >
 	)
 }
 export default Task

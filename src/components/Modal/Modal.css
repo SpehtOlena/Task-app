@@ -1,0 +1,36 @@
+.modal-overlay {
+	position: fixed;
+	z-index: 7;
+	top: 0;
+	left: 0;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(134, 168, 178, 0.65);
+	backdrop-filter: blur(2px);
+}
+
+.modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 50px 30px;
+	width: 240px;
+	height: 200px;
+	background: #AF7A7A;
+	color: #3E3B3B;
+	text-align: center;
+	font-family: Monda;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.modal-button-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
